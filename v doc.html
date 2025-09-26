@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sky Blue Hospitals - Virtual Doctor Consultation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://img.freepik.com/free-photo/stethoscope-with-clipboard-desk_23-2147839242.jpg?size=626&ext=jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+    }
+    .overlay {
+      background: rgba(255,255,255,0.88);
+      min-height: 100vh;
+      padding-bottom: 24px;
+    }
+    header {
+      text-align: center;
+      padding: 38px 0 12px;
+      background: linear-gradient(to right, #41b9ef 50%, #79e5ef 100%);
+      color: #fff;
+      font-size: 2.3em;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      border-bottom: 0.5px solid #d6f1fd;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 29px;
+      font-size: 1.1em;
+      color: #236494;
+    }
+    .doctor-selection, .appointment, .perception {
+      background: #f4fafd;
+      border-radius: 14px;
+      max-width: 600px;
+      margin: 0 auto 29px auto;
+      padding: 24px 38px;
+      box-shadow: 0 2px 9px #b5e2f044;
+    }
+    h2 {
+      color: #2bb1e0;
+      margin-top: 0;
+      margin-bottom: 17px;
+      font-weight: 700;
+    }
+    .label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #236494;
+    }
+    select, input[type="date"], input[type="time"] {
+      width: 100%;
+      font-size: 1em;
+      padding: 9px 12px;
+      margin-bottom: 18px;
+      border-radius: 7px;
+      border: 1px solid #b2defc;
+      background: #fff;
+      font-family: inherit;
+    }
+    .doctors-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 17px;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .doctor-card {
+      text-align: center;
+      width: 135px;
+    }
+    .doctor-card img {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 1px 10px #81aee34b;
+      border: 2px solid #bee6f5;
+    }
+    .doctor-name, .specialty {
+      margin-top: 7px;
+      color: #2b4259;
+      font-size: 1.07em;
+      font-weight: 600;
+    }
+    .specialty {
+      font-size: 0.92em;
+      color: #4193b9;
+      font-weight: 400;
+    }
+    .appointment {
+      margin-top: 37px;
+    }
+    button {
+      background: #2bb1e0;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 1.13em;
+      padding: 13px 29px;
+      cursor: pointer;
+      margin-top: 10px;
+      box-shadow: 0 2px 9px #2bb1e055;
+      transition: background 0.2s ease;
+      font-weight: 700;
+    }
+    button:hover {
+      background: #1a92bd;
+    }
+    .perception textarea {
+      width: 100%;
+      font-size: 1em;
+      padding: 9px 12px;
+      border-radius: 7px;
+      border: 1px solid #b2defc;
+      background: #fff;
+      resize: vertical;
+      min-height: 69px;
+      font-family: inherit;
+    }
+    @media (max-width: 710px) {
+      .doctor-selection, .appointment, .perception {
+        padding: 16px 5vw;
+      }
+      .doctors-list {
+        flex-direction: column;
+        gap: 13px;
+      }
+      .doctor-card {
+        width: 92vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>Sky Blue Hospitals — Virtual Doctor Consultation</header>
+    <div class="intro">
+      Consult experienced specialists via secure video from anywhere. Choose your specialty, a doctor, and book appointments effortlessly.<br>
+      <b>High quality care, confidential chat, medical perception sharing, and digital prescriptions.</b>
+    </div>
+
+    <form>
+      <div class="doctor-selection">
+        <h2>Select Specialty & Doctor</h2>
+        <label class="label" for="specialty">Specialty</label>
+        <select id="specialty" name="specialty" required>
+          <option value="">Choose...</option>
+          <option value="pulmonology">Pulmonology</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="neurology">Neurology</option>
+          <option value="dermatology">Dermatology</option>
+          <option value="gastroenterology">Gastroenterology</option>
+        </select>
+        <div class="doctors-list">
+          <div class="doctor-card">
+            <img src="https://img.freepik.com/free-photo/doctor-wearing-stethoscope-white-coat_1150-21776.jpg?size=626&ext=jpg" alt="Dr. Anjali Singh"/>
+            <div class="doctor-name">Dr. Anjali Singh</div>
+            <div class="specialty">Pulmonology</div>
+          </div>
+          <div class="doctor-card">
+            <img src="https://img.freepik.com/free-photo/smiling-young-male-doctor_23-2149708030.jpg?size=626&ext=jpg" alt="Dr. Rahul Kumar"/>
+            <div class="doctor-name">Dr. Rahul Kumar</div>
+            <div class="specialty">Cardiology</div>
+          </div>
+          <div class="doctor-card">
+            <img src="https://img.freepik.com/free-photo/portrait-female-doctor-lab-coat_23-2148733468.jpg?size=626&ext=jpg" alt="Dr. Priya Desai"/>
+            <div class="doctor-name">Dr. Priya Desai</div>
+            <div class="specialty">Dermatology</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="appointment">
+        <h2>Choose Appointment Date & Time</h2>
+        <label class="label" for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+        <label class="label" for="time">Time</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+
+      <div class="perception">
+        <h2>Medical Perception</h2>
+        <label class="label" for="perception">Describe your symptoms or medical history:</label>
+        <textarea id="perception" name="perception" placeholder="e.g., chest pain, breathlessness, previous heart issues..." required></textarea>
+      </div>
+
+      <div class="intro" style="margin-bottom: 11px;">
+        <button type="submit">Book Consultation</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
